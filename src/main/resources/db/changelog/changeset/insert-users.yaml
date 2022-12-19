@@ -1,9 +1,35 @@
 databaseChangeLog:
   - changeSet:
-    id: insert-users
-    author: kharinavi
-    changes:
-      - sql:
-          sql: insert into users (first_name,last_name,email,user_id) values ('vasya','pupkin','vasya',2)
-      - sql:
-          sql: insert into users (first_name,last_name,email,user_id) values ('poet','poetov','poet',3)
+      id: insert-users
+      author: kharinavi
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: vasya
+              - column:
+                  name: last_name
+                  value: pupkin
+              - column:
+                  name: email
+                  value: pupkin
+              - column:
+                  name: user_id
+                  value: 2
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: first_name
+                  value: poet
+              - column:
+                  name: last_name
+                  value: poetov
+              - column:
+                  name: email
+                  value: poet
+              - column:
+                  name: user_id
+                  value: 3

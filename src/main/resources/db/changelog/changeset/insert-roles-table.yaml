@@ -1,11 +1,32 @@
 databaseChangeLog:
   - changeSet:
-    id: insert-roles
-    author: kharinavi
-    changes:
-      - sql:
-          sql: insert into roles (role) values ("USER")
-      - sql:
-          sql: insert into roles (role) values ("ADMIN")
-      - sql:
-          sql: insert into roles (role) values ("POET")
+      id: insert-roles
+      author: kharinavi
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: role
+                  value: USER
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: role
+                  value: POET
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: role
+                  value: ADMIN

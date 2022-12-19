@@ -1,23 +1,23 @@
 databaseChangeLog:
   - changeSet:
-    id: insert-users_roles
-    author: kharinavi
-    changes:
-      - insert:
-          tableName: users_roles
-          columns:
-            - column:
-                name: id_user
-                value: "1"
-            - column:
-                name: id_role
-                value: "1"
-      - insert:
-          tableName: users_roles
-          columns:
-            - column:
-                name: id_user
-                value: "2"
-            - column:
-                name: id_role
-                value: "2"
+      id: insert-users_roles
+      author: kharinavi
+      changes:
+        - insert:
+            tableName: users_roles
+            columns:
+              - column:
+                  name: id_user
+                  value: 1
+              - column:
+                  name: id_role
+                  value: 1
+        - insert:
+            tableName: users_roles
+            columns:
+              - column:
+                  name: id_user
+                  value: 2
+              - column:
+                  name: id_role
+                  value: 2

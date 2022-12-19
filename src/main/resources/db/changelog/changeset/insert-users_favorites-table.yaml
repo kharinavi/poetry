@@ -1,14 +1,14 @@
 databaseChangeLog:
   - changeSet:
-    id: insert-users_roles
-    author: kharinavi
-    changes:
-      - insert:
-          tableName: users_roles
-          columns:
-            - column:
-                name: user_id
-                value: "1"
-            - column:
-                name: poem_id
-                value: "1"
+      id: insert-users_favorites
+      author: kharinavi
+      changes:
+        - insert:
+            tableName: users_favorites
+            columns:
+              - column:
+                  name: user_id
+                  value: 1
+              - column:
+                  name: poem_id
+                  value: 1

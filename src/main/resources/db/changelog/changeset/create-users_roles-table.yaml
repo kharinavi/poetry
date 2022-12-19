@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: create-users-roles
+      id: create-users_roles
       author: kharinavi
       changes:
         - createTable:
-            tableName: poems
+            tableName: users_roles
             columns:
               - column:
                   name: id_user

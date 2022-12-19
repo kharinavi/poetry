@@ -1,41 +1,41 @@
 databaseChangeLog:
   - changeSet:
-    id: insert-usrs
-    author: kharinavi
-    changes:
-      - insert:
-          tableName: usrs
-          columns:
-            - column:
-                name: email
-                value: "admin"
-            - column:
-                name: password
-                value: "$2a$12$kcndoPRSsSLlSsx1WfpCm.lexLb8y2O87TA961C1bEnVKwHUJdiBK"
-            - column:
-                name: status
-                value: "ACTIVE"
-      - insert:
-          tableName: usrs
-          columns:
-            - column:
-                name: email
-                value: "vasya"
-            - column:
-                name: password
-                value: "$2a$12$n1svZ0m8uccNMDWwdEshH.MJQpj1T.Wq43A4cJlY7hbDv8TjusNpi"
-            - column:
-                name: email
-                value: "BANNED"
-      - insert:
-          tableName: usrs
-          columns:
-            - column:
-                name: email
-                value: "poet"
-            - column:
-                name: password
-                value: "$2a$12$9qTJd/B2xdrOP/uKYNojL.MI4soUv47eeuAnz2e3y4wZ6zECWh0J6"
-            - column:
-                name: email
-                value: "ACTIVE"
+      id: insert-usrs
+      author: kharinavi
+      changes:
+        - insert:
+            tableName: usrs
+            columns:
+              - column:
+                  name: email
+                  value: admin
+              - column:
+                  name: password
+                  value: $2a$12$kcndoPRSsSLlSsx1WfpCm.lexLb8y2O87TA961C1bEnVKwHUJdiBK
+              - column:
+                  name: status
+                  value: ACTIVE
+        - insert:
+            tableName: usrs
+            columns:
+              - column:
+                  name: email
+                  value: vasya
+              - column:
+                  name: password
+                  value: $2a$12$n1svZ0m8uccNMDWwdEshH.MJQpj1T.Wq43A4cJlY7hbDv8TjusNpi
+              - column:
+                  name: status
+                  value: BANNED
+        - insert:
+            tableName: usrs
+            columns:
+              - column:
+                  name: email
+                  value: poet
+              - column:
+                  name: password
+                  value: $2a$12$9qTJd/B2xdrOP/uKYNojL.MI4soUv47eeuAnz2e3y4wZ6zECWh0J6
+              - column:
+                  name: status
+                  value: ACTIVE

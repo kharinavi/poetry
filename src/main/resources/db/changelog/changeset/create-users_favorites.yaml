@@ -4,7 +4,7 @@ databaseChangeLog:
       author: kharinavi
       changes:
         - createTable:
-            tableName: poems
+            tableName: users_favorites
             columns:
               - column:
                   name: user_id

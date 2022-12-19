@@ -11,15 +11,15 @@ databaseChangeLog:
       file: db/changelog/changeset/create-users_roles-table.yaml
   - include:
       file: db/changelog/changeset/create-users_favorites.yaml
-  #- include:
-   #   file: db/changelog/changeset/insert-roles-table.yaml
-  #- include:
-   #   file: db/changelog/changeset/insert-usrs-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-roles-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-usrs-table.yaml
   - include:
       file: db/changelog/changeset/insert-users.yaml
   - include:
       file: db/changelog/changeset/insert-poems-table.yaml
   - include:
-      file: db/changelog/changeset/insert-users_roles-table.yaml
+      file: db/changelog/changeset/insert-users-roles-table.yaml
   - include:
       file: db/changelog/changeset/insert-users_favorites-table.yaml
