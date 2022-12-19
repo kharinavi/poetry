@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-poems
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: poems
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: text
+                  type: varchar(255)
+              - column:
+                  name: author
+                  type: bigint
+                  constraints:
+                    foreignKeyName: author_fk
+                    referencedTableName: users
+                    referencedColumnNames: id

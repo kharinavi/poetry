@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-usr
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: usrs
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(255)

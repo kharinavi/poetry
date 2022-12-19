@@ -1,0 +1,146 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-roles
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(255)
+  - changeSet:
+      id: create-usr
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: usrs
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(255)
+  - changeSet:
+      id: create-users
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(255)
+              - column:
+                  name: last_name
+                  type: varchar(255)
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+  - changeSet:
+      id: create-poems
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: poems
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: text
+                  type: varchar(255)
+              - column:
+                  name: author
+                  type: bigint
+                  constraints:
+                    foreignKeyName: author_fk
+                    referencedTableName: users
+                    referencedColumnNames: id
+  - changeSet:
+      id: create-users-roles
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: users_roles
+            columns:
+              - column:
+                  name: id_user
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: user_fk
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: id_role
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: role_fk
+                    referencedTableName: roles
+                    referencedColumnNames: id
+  - changeSet:
+      id: create-users-favorites
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: users_favorites
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: user_fk
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: poem_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: poem_fk
+                    referencedTableName: poems
+                    referencedColumnNames: id

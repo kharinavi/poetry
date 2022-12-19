@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users-favorites
+      author: kharinavi
+      changes:
+        - createTable:
+            tableName: poems
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: user_fk
+                    referencedTableName: users
+                    referencedColumnNames: id
+              - column:
+                  name: poem_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: poem_fk
+                    referencedTableName: poems
+                    referencedColumnNames: id

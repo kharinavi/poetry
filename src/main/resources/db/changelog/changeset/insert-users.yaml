@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+    id: insert-users
+    author: kharinavi
+    changes:
+      - sql:
+          sql: insert into users (first_name,last_name,email,user_id) values ('vasya','pupkin','vasya',2)
+      - sql:
+          sql: insert into users (first_name,last_name,email,user_id) values ('poet','poetov','poet',3)

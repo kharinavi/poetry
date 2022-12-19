@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+    id: insert-users
+    author: kharinavi
+    changes:
+      - insert:
+          tableName: users
+          columns:
+            - column:
+                name: first_name
+                value: "vasya"
+            - column:
+                name: last_name
+                value: "pupkin"
+            - column:
+                name: email
+                value: "vasya"
+      - insert:
+          tableName: users
+          columns:
+            - column:
+                name: first_name
+                value: "poet"
+            - column:
+                name: last_name
+                value: "poetov"
+            - column:
+                name: email
+                value: "poet"
